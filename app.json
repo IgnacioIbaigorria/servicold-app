@@ -1,0 +1,67 @@
+{ 
+  "name": "Servicold App",
+  "expo": {
+    "name": "Servicold App",
+    "slug": "servicoldApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo2.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/logo-splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ignacioivan00.servicoldApp", // Asegúrate de que sea único
+      "infoPlist": {
+        "UIBackgroundModes": ["fetch", "remote-notification"] // Permitir notificaciones en segundo plano
+      }
+    },
+    "android": {
+      "icon": "./assets/images/logo-android.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptative.png",
+        "backgroundColor": "#ffffff"
+      },
+      "googleServicesFile": "./android/app/google-services.json",
+      "permissions": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "NOTIFICATIONS",
+        "INTERNET",
+        "FOREGROUND_SERVICE",
+        "READ_EXTERNAL_STORAGE",
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM ",
+        "VIBRATE",
+        "WAKE_LOCK",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "package": "com.ignacioivan00.servicoldApp"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-notifications",
+      "expo-background-fetch",
+      "@react-native-firebase/app"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "3d9b1ab3-ddaf-4057-9dc4-dee371c749e6"
+      }
+    }
+  }
+}
